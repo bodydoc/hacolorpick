@@ -14,7 +14,12 @@
       <span class="slider"></span>
     </label>
     <span class="mode-label" id="modeLabel">Light Mode</span>
+      <div class="copy-container">
+    <span id="copyMessageHSL" class="copy-message">hsla(180, 50%, 50%, 1) copied to clipboard!</span>
+    <span id="copyNotification" class="copy-message">lightcyan copied to clipboard!</span>
   </div>
+  </div>
+
   <div class="row">
     <section class="hsl-modifier">
       <h2>HSL Color Modifier</h2> <br />
@@ -49,7 +54,7 @@
             </div>
 
             <button id="exportHSLModifierBtn">Copy hsla(180, 50%, 50%, 1) to clipboard</button><br />
-            <span id="copyMessageHSL" class="copy-message"></span>
+           
           </div>
 
           <div id="modifierColorDisplay"></div>
@@ -123,7 +128,7 @@
       <div id="colorTableContainer"></div>
 
       <!-- Notification for clipboard copy -->
-      <span id="copyNotification" class="copy-message"></span>
+      
       <section class="entities-preview">
         <h2>Preview</h2> <br />
         <h5><b>HINT:</b> Use dark/light mode</h5> <br />
@@ -174,9 +179,25 @@
     </section>
   </div>
 
-  <span id="copyNotification" class="copy-message"></span>
+
   <script src="scripts.js"></script>
-  <!-- JavaScript to listen for theme changes from the parent window -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const copyMessageHSL = document.getElementById("copyMessageHSL");
+      const copyNotification = document.getElementById("copyNotification");
+      const exportHSLBtn = document.getElementById("exportHSLModifierBtn");
+
+      exportHSLBtn.addEventListener("click", function () {
+        copyMessageHSL.style.display = "inline-block";
+        setTimeout(() => (copyMessageHSL.style.display = "none"), 2000);
+      });
+
+      document.getElementById("colorTableContainer").addEventListener("click", function () {
+        copyNotification.style.display = "inline-block";
+        setTimeout(() => (copyNotification.style.display = "none"), 2000);
+      });
+    });
+  </script>
   <script>
     // Listen for theme change messages from parent
     window.addEventListener('message', function (event) {
