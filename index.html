@@ -8,133 +8,188 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle">
+      <span class="slider"></span>
+    </label>
+    <span class="mode-label" id="modeLabel">Light Mode</span>
+  </div>
   <div class="row">
-    <!-- HSL Color Modifier Section -->
     <section class="hsl-modifier">
-  <h2>HSL Color Modifier</h2>
-  <div class="hsl-controls">
-    <div class="sliders">
-      <label for="hueRange">Hue:</label>
-      <input type="range" id="hueRange" min="0" max="360" value="180">
-      <span id="hueValue">180</span><br>
+      <h2>HSL Color Modifier</h2> <br />
+      <h5>HOW TO USE: Use the sliders to choose your color. Click the 'Copy ... to clipboard' button. Then, simply paste
+        it into the 'color:' field of your card.</h5>
+      <section>
+        <br />
+        <div class="hsl-controls">
+          <div class="sliders">
+            <div class="slider-group">
+              <label for="hueRange">Hue:</label>
+              <input type="range" id="hueRange" min="0" max="360" value="180">
+              <span id="hueValue">180</span>
+            </div>
 
-      <label for="saturationRange">Saturation:</label>
-      <input type="range" id="saturationRange" min="0" max="100" value="50">
-      <span id="saturationValue">50</span><br>
+            <div class="slider-group">
+              <label for="saturationRange">Saturation:</label>
+              <input type="range" id="saturationRange" min="0" max="100" value="50">
+              <span id="saturationValue">50</span>
+            </div>
 
-      <label for="lightnessRange">Lightness:</label>
-      <input type="range" id="lightnessRange" min="0" max="100" value="50">
-      <span id="lightnessValue">50</span><br>
+            <div class="slider-group">
+              <label for="lightnessRange">Lightness:</label>
+              <input type="range" id="lightnessRange" min="0" max="100" value="50">
+              <span id="lightnessValue">50</span>
+            </div>
 
-      <label for="alphaRange">Transparency:</label>
-      <input type="range" id="alphaRange" min="0" max="1" step="0.01" value="1">
-      <span id="alphaValue">1</span><br>
+            <div class="slider-group">
+              <label for="alphaRange">Transparency:</label>
+              <input type="range" id="alphaRange" min="0" max="1" step="0.01" value="1">
+              <span id="alphaValue">1</span>
+            </div>
 
-      <button id="exportHSLModifierBtn">Copy hsla(180, 50%, 50%, 1) to clipboard</button><br/>
-      <span id="copyMessageHSL" class="copy-message"></span>
-    </div>
+            <button id="exportHSLModifierBtn">Copy hsla(180, 50%, 50%, 1) to clipboard</button><br />
+            <span id="copyMessageHSL" class="copy-message"></span>
+          </div>
 
-    <div id="modifierColorDisplay"></div>
-  </div>
+          <div id="modifierColorDisplay"></div>
+        </div>
+      </section>
 
 
-<section class="entities-preview">
-  <h2>Preview</h2>
-  <div class="entities-grid">
-    <div class="entity">
-      <i class="fas fa-fan fan" id="icon_1"></i>
-      <div class="label">AC Office</div>
-      <div class="status" id="acOfficeCoolStatus">On</div>
-    </div>
-  
-    <div class="entity">
-      <i class="fa-solid fa-bell" id="icon_2"></i>
-      <div class="label">Bell</div>
-      
-    </div>
-    <div class="entity">
-       <i class="fa-solid fa-house-user" id="icon_3"></i>
-      <div class="label">User Home</div>
-      
-    </div>
-    <div class="entity">
-      <i class="fas fa-fan fan"id="icon_4"></i>
-      <div class="label">AC Office</div>
-      <div class="status" id="acLivingHeatStatus">Off</div>
-    </div>
-	 <div class="entity">
-      <i class="fa-solid fa-user" id="icon_5"></i>
-      <div class="label">User Logged</div>
-      
-    </div>
-    <div class="entity">
-	  <i class="fa-regular fa-user" id="icon_6"></i>
-      <div class="label">User Logged</div>
-      
-    </div>
-  </div>
-</section>
+      <section class="entities-preview">
+        <h2>Preview</h2> <br />
+        <h5><b>HINT:</b> Use dark/light mode</h5> <br />
+        <div class="entities-grid">
+          <div class="entity">
+            <i class="fas fa-fan fan" id="icon_1"></i>
+            <div class="label">AC Office</div>
+            <div class="status" id="acOfficeCoolStatus">On</div>
+          </div>
 
-</section>
+          <div class="entity">
+            <i class="fa-solid fa-bell" id="icon_2"></i>
+            <div class="label">Bell</div>
+
+          </div>
+          <div class="entity">
+            <i class="fa-solid fa-house-user" id="icon_3"></i>
+            <div class="label">User Home</div>
+
+          </div>
+          <div class="entity">
+            <i class="fas fa-fan fan" id="icon_4"></i>
+            <div class="label">AC Office</div>
+
+          </div>
+          <div class="entity">
+            <i class="fa-solid fa-user" id="icon_5"></i>
+            <div class="label">User Logged</div>
+
+          </div>
+          <div class="entity">
+            <i class="fa-regular fa-user" id="icon_6"></i>
+            <div class="label">User Logged</div>
+
+          </div>
+          <div class="entity">
+            <i class="fa-solid fa-envelope" id="icon_7"></i>
+            <div class="label">User Logged</div>
+
+          </div>
+          <div class="entity">
+            <i class="fa-regular fa-envelope" id="icon_8"></i>
+            <div class="label">User Logged</div>
+
+          </div>
+        </div>
+      </section>
+
+    </section>
 
 
     <!-- Extended Color Keywords Picker -->
     <section class="color-keywords">
-      <h2>Extended Color Picker</h2>
-      
-
-<!--
+      <h2>Extended Color Picker </h2>
+      <br />
+      <h5><b>HOW TO USE:</b> Click on a color to automatically copy its name to the clipboard. Then, simply paste it
+        into the 'color:' field of your card.</h5> <br />
+      <!--
       <div id="keywordColorDisplay" style="width: 250px; height: 250px; border: 1px solid #000; background-color: aliceblue;"></div>
  <select id="colorKeywordPicker"></select>
       <button id="exportKeywordBtn">Copy aliceblue to clipboard</button>
       <span id="copyMessageKeyword" class="copy-message"></span>
 	 -->
-  <div id="colorTableContainer"></div>
+      <div id="colorTableContainer"></div>
 
-  <!-- Notification for clipboard copy -->
-  <span id="copyNotification" class="copy-message"></span>
-<section class="entities-preview">
-  <h2>Preview 1</h2>
-  <div class="entities-grid">
-    <div class="entity">
-      <i class="fas fa-fan fan" id="picon_1"></i>
-      <div class="label">AC Office</div>
-      <div class="status" id="acOfficeCoolStatus1">On</div>
-    </div>
-  
-    <div class="entity">
-      <i class="fa-solid fa-bell" id="picon_2"></i>
-      <div class="label">Bell</div>
-      
-    </div>
-    <div class="entity">
-       <i class="fa-solid fa-house-user" id="picon_3"></i>
-      <div class="label">User Home</div>
-      
-    </div>
-    <div class="entity">
-      <i class="fas fa-fan fan" id="picon_4"></i>
-      <div class="label">AC Office</div>
-      <div class="status" id="acLivingHeatStatus">Off</div>
-    </div>
-	 <div class="entity">
-      <i class="fa-solid fa-user" id="picon_5"></i>
-      <div class="label">User Logged</div>
-      
-    </div>
-    <div class="entity">
-	  <i class="fa-regular fa-user" id="picon_6"></i>
-      <div class="label">User Logged</div>
-      
-    </div>
-  </div>
-</section>
+      <!-- Notification for clipboard copy -->
+      <span id="copyNotification" class="copy-message"></span>
+      <section class="entities-preview">
+        <h2>Preview</h2> <br />
+        <h5><b>HINT:</b> Use dark/light mode</h5> <br />
+        <div class="entities-grid">
+          <div class="entity">
+            <i class="fas fa-fan fan" id="picon_1"></i>
+            <div class="label">AC Office</div>
+            <div class="status" id="acOfficeCoolStatus1">On</div>
+          </div>
+
+          <div class="entity">
+            <i class="fa-solid fa-bell" id="picon_2"></i>
+            <div class="label">Bell</div>
+
+          </div>
+          <div class="entity">
+            <i class="fa-solid fa-house-user" id="picon_3"></i>
+            <div class="label">User Home</div>
+
+          </div>
+          <div class="entity">
+            <i class="fas fa-fan fan" id="picon_4"></i>
+            <div class="label">AC Office</div>
+
+          </div>
+          <div class="entity">
+            <i class="fa-solid fa-user" id="picon_5"></i>
+            <div class="label">User Logged</div>
+
+          </div>
+          <div class="entity">
+            <i class="fa-regular fa-user" id="picon_6"></i>
+            <div class="label">User Logged</div>
+
+          </div>
+          <div class="entity">
+            <i class="fa-solid fa-envelope" id="picon_7"></i>
+            <div class="label">User Logged</div>
+
+          </div>
+          <div class="entity">
+            <i class="fa-regular fa-envelope" id="picon_8"></i>
+            <div class="label">User Logged</div>
+
+          </div>
+        </div>
+      </section>
     </section>
   </div>
 
   <span id="copyNotification" class="copy-message"></span>
   <script src="scripts.js"></script>
+  <!-- JavaScript to listen for theme changes from the parent window -->
+  <script>
+    // Listen for theme change messages from parent
+    window.addEventListener('message', function (event) {
+      if (event.data === 'enable-dark-mode') {
+        document.body.classList.add('dark-mode');
+      } else if (event.data === 'disable-dark-mode') {
+        document.body.classList.remove('dark-mode');
+      }
+    });
+
+    // Notify parent that iframe is ready to receive messages
+    window.parent.postMessage('iframe-ready', '*');
+  </script>
 </body>
+
 </html>
