@@ -132,17 +132,29 @@ button:hover {
   background-color: #555;
 }
 
+.copy-messages {
+  position: relative;
+  margin-left: 20px;
+}
+
 .copy-message {
   background-color: rgba(50, 50, 50, 0.8);
   color: white;
   padding: 8px 12px;
   border-radius: 5px;
   font-size: 14px;
-  margin-left: 20px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   opacity: 0;
   transition: opacity 0.3s ease;
-  position: relative;
-  display: inline-block;
+  white-space: nowrap;
+}
+
+body.dark-mode .copy-message {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
 }
 
 .show-message {
@@ -287,10 +299,11 @@ td:hover {
   bottom: 20px;
   left: 20px;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.9);
+  background: #f6f8fa;
   padding: 8px 15px;
   border-radius: 25px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+ 
+  gap: 15px;
 }
 
 body.dark-mode .toggle-container {

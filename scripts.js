@@ -52,6 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (isFirstLoad) return;
     const copyNotification = document.getElementById("copyNotification");
+    const copyMessageHSL = document.getElementById("copyMessageHSL");
+  
+
+    copyNotification.classList.remove("show-message");
+    copyMessageHSL.classList.remove("show-message");
+
     copyNotification.textContent = `${colorName} copied to clipboard!`;
     copyNotification.classList.add("show-message");
 
@@ -153,6 +159,15 @@ alphaRange.addEventListener("input", (e) => {
 
 document.getElementById("exportHSLModifierBtn").addEventListener("click", () => {
   const hslColor = `hsla(${hueRange.value}, ${saturationRange.value}%, ${lightnessRange.value}%, ${alphaRange.value})`;
+  const copyMessageHSL = document.getElementById("copyMessageHSL");
+  const copyNotification = document.getElementById("copyNotification");
+
+
+
+
+  copyNotification.classList.remove("show-message");
+  copyMessageHSL.classList.remove("show-message");
+
   copyMessageHSL.textContent = `${hslColor} copied to clipboard!`;
   copyMessageHSL.classList.add("show-message");
 
