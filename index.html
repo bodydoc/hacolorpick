@@ -119,12 +119,7 @@
       <br />
       <h5><b>HOW TO USE:</b> Click on a color to automatically copy its name to the clipboard. Then, simply paste it
         into the 'color:' field of your card.</h5> <br />
-      <!--
-      <div id="keywordColorDisplay" style="width: 250px; height: 250px; border: 1px solid #000; background-color: aliceblue;"></div>
- <select id="colorKeywordPicker"></select>
-      <button id="exportKeywordBtn">Copy aliceblue to clipboard</button>
-      <span id="copyMessageKeyword" class="copy-message"></span>
-	 -->
+   
       <div id="colorTableContainer"></div>
 
       <!-- Notification for clipboard copy -->
@@ -199,7 +194,6 @@
     });
   </script>
   <script>
-    // Listen for theme change messages from parent
     window.addEventListener('message', function (event) {
       if (event.data === 'enable-dark-mode') {
         document.body.classList.add('dark-mode');
@@ -208,9 +202,18 @@
       }
     });
 
-    // Notify parent that iframe is ready to receive messages
     window.parent.postMessage('iframe-ready', '*');
   </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-34VQG1PVWH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-34VQG1PVWH');
+  </script>
+
+
 </body>
 
 </html>
