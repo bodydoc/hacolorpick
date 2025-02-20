@@ -52,11 +52,12 @@
               <input type="range" id="alphaRange" min="0" max="1" step="0.01" value="1">
               <span id="alphaValue">1</span>
             </div>
-
-            <button id="exportHSLModifierBtn">Copy hsla(180, 50%, 50%, 1) to clipboard</button><br />
            
+            <div class="hex-group">
+               <button id="exportHSLModifierBtn">Copy hsla(180, 50%, 50%, 1) to clipboard</button><br />
+              <button id="copyHexBtn">Copy HEX #333333</button>
+            </div>
           </div>
-
           <div id="modifierColorDisplay"></div>
         </div>
       </section>
@@ -112,7 +113,6 @@
 
     </section>
 
-
     <!-- Extended Color Keywords Picker -->
     <section class="color-keywords">
       <h2>Extended Color Picker </h2>
@@ -122,8 +122,6 @@
    
       <div id="colorTableContainer"></div>
 
-      <!-- Notification for clipboard copy -->
-      
       <section class="entities-preview">
         <h2>Preview</h2> <br />
         <h5><b>HINT:</b> Use dark/light mode</h5> <br />
@@ -212,7 +210,6 @@
 
     gtag('config', 'G-34VQG1PVWH');
   </script>
-
 
 </body>
 

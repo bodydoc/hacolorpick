@@ -268,6 +268,13 @@ body {
   }
 }
 
+
+body.dark-mode #hexValue {
+  background-color: #2d333b;
+  color: white;
+  border-color: #444c56;
+}
+
 /*////////////////////////// */
 
 #colorTableContainer {
